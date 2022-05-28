@@ -1,0 +1,37 @@
+/ChatApplciation/ChatWebApi/bin
+/ChatApplciation/ChatWebApi/obj
+
+/ChatApplciation/ChatWebApp/bin
+/ChatApplciation/ChatWebApp/obj
+
+/ChatApplciation/ChatApplciation/bin
+/ChatApplciation/ChatApplciation/obj
+
+/ChatApplciation/.vs
+
+
+**.suo
+**.user
+
+
+# dependencies
+/clientSide/node_modules
+/clientSide/.pnp
+/clientSide/.pnp.js
+
+# testing
+/clientSide/coverage
+
+# production
+/clientSide/build
+
+# misc
+/clientSide/.DS_Store
+/clientSide/.env.local
+/clientSide/.env.development.local
+/clientSide/.env.test.local
+/clientSide/.env.production.local
+
+/clientSide/npm-debug.log*
+/clientSide/yarn-debug.log*
+/clientSide/yarn-error.log*
