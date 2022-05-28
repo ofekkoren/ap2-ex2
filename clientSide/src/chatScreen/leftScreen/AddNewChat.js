@@ -28,6 +28,7 @@ async function AddNewChat(props) {
             return "false";
         }
     }
+    return "true";
 }
 
 export default AddNewChat;
