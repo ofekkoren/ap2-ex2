@@ -47,14 +47,10 @@ namespace ChatWebApp.Services
             if (Get(Username) != null)
                 return;
             Rank rank = new Rank { Username = Username, NumeralRank = NumeralRank, Feedback = Feedback };
-            /*            rank.SubmitTime = new DateTime(DateTime.Now.ToString("0"));
-            */
-            /*            rank.SubmitTime = new(DateTime.Now.ToString("0"));
-            */
             rank.SubmitTime = new (DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
-            /*DateTime.Now.ToString("0");*/
             ranks.Add(rank);
         }
+
 
         public static string FormattedDateString(string dateString)
         {

@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.SignalR;
 
 namespace ChatWebApi.Controllers
 {
+    /// <summary>
+    /// In charge of recieving invitations for new chats for the users of the chat server.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class InvitationsController : Controller

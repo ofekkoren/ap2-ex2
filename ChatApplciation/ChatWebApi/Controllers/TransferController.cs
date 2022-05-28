@@ -6,6 +6,9 @@ using ChatWebApi.Models;
 
 namespace ChatWebApi.Controllers
 {
+    /// <summary>
+    /// In charge of recieving new messages sent to the users of the chat server.
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class TransferController : Controller
