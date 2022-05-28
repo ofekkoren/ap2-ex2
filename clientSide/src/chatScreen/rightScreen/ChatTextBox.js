@@ -15,6 +15,7 @@ function ChatTextBox(props) {
         if (messageContent.trim() !== "") {
 
             // Asking from the contact to add the message to his conversation chat.
+            try{
             var response = await fetch('http://' + props.chat.contact.server + '/api/transfer',
                 {
                     method: "POST",
@@ -26,6 +27,10 @@ function ChatTextBox(props) {
                         content: messageContent
                     })
                 })
+            }
+            catch(err) {
+                return;
+            }
             if (!(response.status === 201)) {
                 return;
             }
