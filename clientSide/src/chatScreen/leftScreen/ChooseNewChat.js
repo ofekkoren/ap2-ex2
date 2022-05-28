@@ -35,6 +35,7 @@ function ChooseNewChat(props) {
         let chatsArr = [...props.currentListOfChats];
 
         // Asking for the contact to add us as a contact.
+        try{
         var response = await fetch('http://'+newContactServer+'/api/Invitations',
         {
           method: "POST",
@@ -46,6 +47,12 @@ function ChooseNewChat(props) {
             fromServer: "localhost:5170"
           })
         })
+    }
+        catch(err) {
+            var invalidUser = "invalid user!"
+            document.getElementById("validation").innerHTML = invalidUser;
+            return;
+        }
         // If the user is not registered, announce it is invalid username.
         if(!(response.status === 201)) {
             var invalidUser = "invalid user!"
