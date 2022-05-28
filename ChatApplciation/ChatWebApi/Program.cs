@@ -13,7 +13,6 @@ builder.Services.AddDbContext<ChatWebApiContext>(options =>
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IUserService, UserService>();
@@ -32,33 +31,15 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 }).AddCookie();
 
-
 builder.Services.AddSignalR();
-
-
-/*builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name:"Allow react", policy =>
-    {
-        policy.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
-    });
-});*/
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "Allow react", policy =>
+    options.AddPolicy(name: "Allow all", policy =>
     {
         policy.SetIsOriginAllowed(param=>true).AllowAnyHeader().AllowAnyMethod().AllowCredentials();
     });
 });
-
-/*builder.Services.AddCors(options =>
-{
-    options.AddPolicy("Allow All", builder =>
-    {
-        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-    });
-});*/
 
 var app = builder.Build();
 
@@ -68,23 +49,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors("Allow react");
-//app.UseCors("Allow All");
+app.UseCors("Allow all");
 app.UseHttpsRedirection();
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.UseRouting();
-//app.MapControllers();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Contact}/{action=Index}/{id?}");
-
-/*app.UseEndpoints(endpoints =>
-{
-    endpoints.MapHub<AppHub>("/chatHub");
-});*/
 
 app.MapHub<AppHub>("/hubs/chatHub");
 
