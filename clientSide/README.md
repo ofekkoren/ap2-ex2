@@ -2,7 +2,6 @@
 
 ## **Running the project**	
 The npm libraries which ware installed in this project ware React-Router-v6 and signalIr  ( `npm i --save @microsoft/signalr.` )
-- You can download the project using the commang `git clone https://github.com/TOMER-77/ap2-ex2.git`
 - To run the project you can run the `npm start` command, which will open the client side. This will open the chat application on http://localhost:3000 to view in your browser.
 - **There are 5 initial users signed-up to the chat. Their user names are: Ofek Koren, Tomer Eligayev, Avi Cohen, Shir Levi, Moti Luhim. The password of each one of them is "123456" followed by the first letter of their last name (in upper case).** 
 - For example: the password of the user "Avi Cohen" is "123456C" .
