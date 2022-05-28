@@ -47,6 +47,4 @@ The user controller uses us for passing information from the db to react and vis
 
 From now on, we make sure the user does actions only if he/she is logged into the website, otherwise he/she will have to log-in again. 
 
-We also allow the users on the website to write to one-another by the signalR option - todoooooooooooooo
-
-DataTransferObject file - dotooooo
+We also allow the users on the website to write to eachother and recieve messages in real time using signalIR.
