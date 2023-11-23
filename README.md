@@ -7,7 +7,7 @@ Ofek Koren, id: 207105933
 
 ## **About the project**	
 - The project was developed with React framework (for the client side) and MVC architecture (for the server side and ranks part).
-The npm libraries which were installed in this project ware React-Router-v6 and signalIR (`npm i --save @microsoft/signalr.`)
+The npm libraries which were installed in this project are React-Router-v6 and signalIR (`npm i --save @microsoft/signalr.`)
 - You can download the project using the command `git clone https://github.com/TOMER-77/AP2-EX2.git`
 - The project consists of 3 sub-projects and runs on 3 different ports:
 - - 3000 for the client side.
